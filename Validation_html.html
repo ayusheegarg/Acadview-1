@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<title> FORM </title>
+
+<style type="text/css">
+
+  input:required:invalid, input:focus:invalid {
+    background-image: url(download.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  input:required:valid {
+    background-image: url(download.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+
+</style>
+</head>
+<body style="background:linear-gradient(to bottom, #33ccff 3%, #ff99cc 50%); background-repeat:no-repeat;">
+<center>
+<h1 style="font-family:Tahoma;"> REGISTRATION FORM </h1>
+<form action="#" name="myform" onsubmit="return validation()" >
+<label>NAME</label>
+<input type="text"name="first_name" id="fname"> <br><br>
+<label>EMAIL</label>
+<input type="email" id="mail"> <br> <br>
+<label>PASSWORD</label>
+<input type="password" id="pwd"> <br> <br>
+<label>MOBILE NUMBER</label>
+<input type="number" id="nmbr"> <br> <br>
+<input type="submit" value="submit" id="btn">
+</center>
+</form>
+<script>
+function validation(){
+var namee=document.forms["myform"]["fname"].value;
+var pass=document.forms["myform"]["pwd"].value;
+var number=document.forms["myform"]["nmbr"].value;
+if(namee==""){
+window.alert("Please enter the name");
+document.getElementById("name1").innerHTML="Provide name";
+}else if(pass<6)
+{
+window.alert("password should be of atleast 6 characters");
+}else if(number<10||number>10)
+{
+window.alert("Mobile number should be of 10 digits");
+}else {
+window.alert("form submited");
+}
+
+}
+</script>
+
+</body>
+</html>
