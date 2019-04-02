@@ -4,7 +4,7 @@ var http=require('http');
 var server=http.createServer((req,res)=>{
 
 var mytry={
-    name:"supriya",
+    name:"ayushee",
     work:"full-stack developer",
     age:"21"
 };
